@@ -5,6 +5,9 @@
 
 ## lodash
 
+* Array
+  * [uniq](lodash/uniq.md)
+
 ## React
 
 ## Vue
