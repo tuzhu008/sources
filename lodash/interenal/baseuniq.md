@@ -2,7 +2,7 @@
 
 ```js
 import SetCache from './SetCache.js'
-import arrayIncludes from './arrayIncludes.js'
+import s from './arrayIncludes.js'
 import arrayIncludesWith from './arrayIncludesWith.js'
 import cacheHas from './cacheHas.js'
 import createSet from './createSet.js'
@@ -74,7 +74,6 @@ function baseUniq(array, iteratee, comparator) {
 }
 
 export default baseUniq
-
 ```
 
 
