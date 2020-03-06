@@ -7,6 +7,8 @@
 
 * Array
   * [uniq](lodash/uniq.md)
+* internal
+  * [baseUniq](lodash/baseuniq.md)
 
 ## React
 
