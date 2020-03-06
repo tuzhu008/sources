@@ -8,11 +8,13 @@
 * Array
   * [uniq](lodash/uniq.md)
 * internal
-  * [baseUniq](lodash/baseuniq.md)
+  * [baseUniq](/lodash/interenal/baseuniq.md)
 
 ## React
 
 ## Vue
 
 ## Ant Design
+
+
 
