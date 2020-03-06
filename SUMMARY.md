@@ -9,12 +9,11 @@
   * [uniq](lodash/uniq.md)
 * internal
   * [baseUniq](/lodash/interenal/baseuniq.md)
+  * SetCache
 
 ## React
 
 ## Vue
 
 ## Ant Design
-
-
 
