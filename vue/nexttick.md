@@ -107,7 +107,5 @@ export function nextTick (cb?: Function, ctx?: Object) {
 }
 ```
 
-
-
 ![](/assets/nextTick.png)
 
