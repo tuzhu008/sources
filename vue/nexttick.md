@@ -1,5 +1,18 @@
 # nextTick
 
+`nextTick` 方法使用了微任务进行包装，利用了原生的 `Promise.then` 和 `MutationObserver`。 
+
+`MutationObserver` 有更广泛的支持，但是在 iOS >= 9.3.3 的 UIWebView 中，当在触摸事件处理程序中触发时，会出现严重的 bug。触发几次之后，它就完全停止工作了。因此 `nextTick` 会优先使用 `Promise`。
+
+兼容方案：
+
+* Promise
+
+* MutationObserver
+
+* setImmediate
+
+* setTimeout
 
 ```js
 /* @flow */
@@ -23,35 +36,17 @@ function flushCallbacks () {
   }
 }
 
-// Here we have async deferring wrappers using microtasks.
-// In 2.5 we used (macro) tasks (in combination with microtasks).
-// However, it has subtle problems when state is changed right before repaint
-// (e.g. #6813, out-in transitions).
-// Also, using (macro) tasks in event handler would cause some weird behaviors
-// that cannot be circumvented (e.g. #7109, #7153, #7546, #7834, #8109).
-// So we now use microtasks everywhere, again.
-// A major drawback of this tradeoff is that there are some scenarios
-// where microtasks have too high a priority and fire in between supposedly
-// sequential events (e.g. #4521, #6690, which have workarounds)
-// or even between bubbling of the same event (#6566).
 let timerFunc
 
-// The nextTick behavior leverages the microtask queue, which can be accessed
-// via either native Promise.then or MutationObserver.
-// MutationObserver has wider support, however it is seriously bugged in
-// UIWebView in iOS >= 9.3.3 when triggered in touch event handlers. It
-// completely stops working after triggering a few times... so, if native
-// Promise is available, we will use it:
-/* istanbul ignore next, $flow-disable-line */
 if (typeof Promise !== 'undefined' && isNative(Promise)) {
   const p = Promise.resolve()
   timerFunc = () => {
     p.then(flushCallbacks)
-    // In problematic UIWebViews, Promise.then doesn't completely break, but
-    // it can get stuck in a weird state where callbacks are pushed into the
-    // microtask queue but the queue isn't being flushed, until the browser
-    // needs to do some other work, e.g. handle a timer. Therefore we can
-    // "force" the microtask queue to be flushed by adding an empty timer.
+
+    // 在有问题的 uiwebview 中， Promise.then 并没有完全失效，
+    // 但它会陷入一种奇怪的状态，回调被推入微任务队列，但队列没有被刷新，
+    // 直到浏览器需要做一些其他的工作，例如处理一个计时器。
+    // 因此，我们可以通过添加一个空计时器来“强制”刷新微任务队列。
     if (isIOS) setTimeout(noop)
   }
   isUsingMicroTask = true
@@ -60,9 +55,9 @@ if (typeof Promise !== 'undefined' && isNative(Promise)) {
   // PhantomJS and iOS 7.x
   MutationObserver.toString() === '[object MutationObserverConstructor]'
 )) {
-  // Use MutationObserver where native Promise is not available,
-  // e.g. PhantomJS, iOS7, Android 4.4
-  // (#6466 MutationObserver is unreliable in IE11)
+  // 在原生 Promise 不可用的地方使用 MutationObserver
+  // 例如，PhantomJS, iOS7, Android 4.4
+  // (#6466 MutationObserver 在 IE11 中不可靠)
   let counter = 1
   const observer = new MutationObserver(flushCallbacks)
   const textNode = document.createTextNode(String(counter))
@@ -75,14 +70,12 @@ if (typeof Promise !== 'undefined' && isNative(Promise)) {
   }
   isUsingMicroTask = true
 } else if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
-  // Fallback to setImmediate.
-  // Technically it leverages the (macro) task queue,
-  // but it is still a better choice than setTimeout.
+  // 回退到 setImmediate。从技术上讲，它利用了(宏)任务队列，但它仍然是比 setTimeout 更好的选择。
   timerFunc = () => {
     setImmediate(flushCallbacks)
   }
 } else {
-  // Fallback to setTimeout.
+  // 回退到 setTimeout.
   timerFunc = () => {
     setTimeout(flushCallbacks, 0)
   }
