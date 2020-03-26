@@ -15,5 +15,7 @@
 
 ## Vue
 
+* $nextTick
+
 ## Ant Design
 
