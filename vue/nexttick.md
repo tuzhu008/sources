@@ -1,8 +1,8 @@
 # nextTick
 
-`nextTick` 方法使用了微任务进行包装，利用了原生的 `Promise.then` 和 `MutationObserver`。 
+`nextTick` 方法使用了微任务进行包装，利用了原生的 `Promise.then` 和 `MutationObserver`。
 
-`MutationObserver` 有更广泛的支持，但是在 iOS >= 9.3.3 的 UIWebView 中，当在触摸事件处理程序中触发时，会出现严重的 bug。触发几次之后，它就完全停止工作了。因此 `nextTick` 会优先使用 `Promise`。
+`MutationObserver` 有更广泛的支持，但是在 iOS &gt;= 9.3.3 的 UIWebView 中，当在触摸事件处理程序中触发时，会出现严重的 bug。触发几次之后，它就完全停止工作了。因此 `nextTick` 会优先使用 `Promise`。
 
 兼容方案：
 
@@ -105,5 +105,9 @@ export function nextTick (cb?: Function, ctx?: Object) {
     })
   }
 }
-
 ```
+
+
+
+![](/assets/nextTick.png)
+
