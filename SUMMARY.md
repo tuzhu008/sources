@@ -24,6 +24,7 @@
   * inject.js
   * lifecycle
   * proxy
+  * render.js
 
 ## Ant Design
 
