@@ -18,6 +18,7 @@
 * [$nextTick](vue/nexttick.md)
 * [入口](/vue/entry.md)
 * core
+  * index.js
 
 ## Ant Design
 
