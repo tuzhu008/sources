@@ -19,8 +19,7 @@
 * [入口](/vue/entry.md)
 * core
   * [index.js](/vue/core/index.md)
+  * init.js
 
 ## Ant Design
-
-
 
