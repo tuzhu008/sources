@@ -70,15 +70,11 @@ Vue.prototype._init = function (options?: Object) {
   // a uid
   vm._uid = uid++
 
-  let startTag, endTag
-
-  // a flag to avoid this being observed
+  // 用来避免被观察的标志
   vm._isVue = true
-  // merge options
+  // 合并选项
   if (options && options._isComponent) {
-    // optimize internal component instantiation
-    // since dynamic options merging is pretty slow, and none of the
-    // internal component options needs special treatment.
+    // 优化内部组件实例化，因为动态选项合并非常慢，而且没有一个内部组件选项需要特殊处理。
     initInternalComponent(vm, options)
   } else {
     vm.$options = mergeOptions(
