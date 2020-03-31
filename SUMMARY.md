@@ -22,6 +22,7 @@
   * init.js
   * events.js
   * inject.js
+  * lifecycle
 
 ## Ant Design
 
