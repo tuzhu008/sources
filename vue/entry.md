@@ -45,7 +45,7 @@ export default Vue
 * stateMixin
 
   为 Vue 增加原型属性 `$data`、`$props`
-  
+
   为 Vue 增加原型方法 `$set`、`$delete`、`$watch`、`$delete`、`$delete`、`$delete`、
 
 * eventsMixin
@@ -53,3 +53,6 @@ export default Vue
 * lifecycleMixin
 
 * renderMixin
+
+
+
