@@ -50,6 +50,8 @@ export default Vue
 
 * eventsMixin
 
+  为 Vue 增加原型方法 `$on`、`$once`、`$off`、`$delete`、`$emit`
+
 * lifecycleMixin
 
 * renderMixin
