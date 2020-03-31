@@ -38,25 +38,27 @@ export default Vue
 
 `index.js` 作为入口只定义了 Vue 的构造函数，它的其他能力由其他的方法来进行扩展：
 
-* initMixin
+* `initMixin()`
 
   为 Vue 增加原型方法 `_init`
 
-* stateMixin
+* `stateMixin()`
 
   为 Vue 增加原型属性 `$data`、`$props`
 
   为 Vue 增加原型方法 `$set`、`$delete`、`$watch`
 
-* eventsMixin
+* `eventsMixin()`
 
   为 Vue 增加原型方法 `$on`、`$once`、`$off`、`$delete`、`$emit`
 
-* lifecycleMixin
+* `lifecycleMixin()`
 
   为 Vue 增加原型方法 `_update`、`$forceUpdate`、`$destroy`
 
-* renderMixin
+* `renderMixin()`
 
   为 Vue 增加原型方法 `$nextTick`、`_render`
 
+
+从 Vue 的构造函数来看，`initMixin()` 方法新增的 `_init` 方法是 Vue 初始化的入口。
