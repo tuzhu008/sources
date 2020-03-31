@@ -20,6 +20,7 @@
 * core
   * [index.js](/vue/core/index.md)
   * init.js
+  * events.js
 
 ## Ant Design
 
