@@ -44,7 +44,7 @@ export default Vue
 
 * stateMixin
 
-  为 Vue 增加原型方法 `$set`、`$delete`、`$delete`、`$delete`、`$delete`、`$delete`、
+  为 Vue 增加原型方法 `$set`、`$delete`、`$watch`、`$delete`、`$delete`、`$delete`、
 
 * eventsMixin
 
