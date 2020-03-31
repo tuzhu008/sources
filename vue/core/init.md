@@ -130,3 +130,23 @@ function resolveModifiedOptions (Ctor: Class<Component>): ?Object {
   return modified
 }
 ```
+
+`init.js` 模块为提供了 `initMixin` 方法，该方法为 Vue 的原型对象增加了一个 `_init` 方法。
+
+`_init` 作用是用来进行一些初始化的动作：
+
+```js
+initLifecycle(vm)
+initEvents(vm)
+initRender(vm)
+callHook(vm, 'beforeCreate')
+initInjections(vm) // resolve injections before data/props
+initState(vm)
+initProvide(vm) // resolve provide after data/props
+callHook(vm, 'created')
+
+if (vm.$options.el) {
+  vm.$mount(vm.$options.el)
+}
+```
+
