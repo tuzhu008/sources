@@ -46,7 +46,7 @@ export default Vue
 
   为 Vue 增加原型属性 `$data`、`$props`
 
-  为 Vue 增加原型方法 `$set`、`$delete`、`$watch`、`$delete`、`$delete`、`$delete`、
+  为 Vue 增加原型方法 `$set`、`$delete`、`$watch`
 
 * eventsMixin
 
@@ -54,9 +54,9 @@ export default Vue
 
 * lifecycleMixin
 
-  为 Vue 增加原型方法 `_update`、`$forceUpdate`、`$destroy`、`$delete`、`$emit`
+  为 Vue 增加原型方法 `_update`、`$forceUpdate`、`$destroy`
 
 * renderMixin
 
-
+  为 Vue 增加原型方法 `$nextTick`、`_render`
 
