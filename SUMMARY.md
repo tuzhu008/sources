@@ -20,7 +20,7 @@
 * [core](/vue/core/README.md)
   * [index.js](/vue/core/index.md)
   * [init.js](/vue/core/init.md)
-  * [events.js](/vue/core/events.js)
+  * [events.js](/vue/core/events.md)
   * [inject.js](/vue/core/inject.md)
   * [lifecycle.js](/vue/core/lifecycle.md)
   * [proxy.js](/vue/core/proxy.md)
