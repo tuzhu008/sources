@@ -40,6 +40,8 @@ export default Vue
 
 * initMixin
 
+  为 Vue 增加原型方法 `_init`
+
 * stateMixin
 
 * eventsMixin
