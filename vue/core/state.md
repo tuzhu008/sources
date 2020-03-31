@@ -1,3 +1,8 @@
+# state.js
+
+## 源码
+
+```js
 /* @flow */
 
 import config from '../config'
@@ -366,3 +371,6 @@ export function stateMixin (Vue: Class<Component>) {
     }
   }
 }
+```
+
+## 解读
