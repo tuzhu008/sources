@@ -22,8 +22,8 @@
   * init.js
   * events.js
   * inject.js
-  * lifecycle
-  * proxy
+  * lifecycle.js
+  * proxy.js
   * render.js
 
 ## Ant Design
