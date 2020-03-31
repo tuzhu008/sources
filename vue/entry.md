@@ -88,3 +88,43 @@ Vue 源码解读
     ├── patch.js
     └── vnode.js
 ```
+
+**index.js**
+
+```js
+import { initMixin } from './init'
+import { stateMixin } from './state'
+import { renderMixin } from './render'
+import { eventsMixin } from './events'
+import { lifecycleMixin } from './lifecycle'
+import { warn } from '../util/index'
+
+function Vue (options) {
+  if (process.env.NODE_ENV !== 'production' &&
+    !(this instanceof Vue)
+  ) {
+    warn('Vue is a constructor and should be called with the `new` keyword')
+  }
+  this._init(options)
+}
+
+initMixin(Vue)
+stateMixin(Vue)
+eventsMixin(Vue)
+lifecycleMixin(Vue)
+renderMixin(Vue)
+
+export default Vue
+```
+
+`index.js` 作为入口只定义了 Vue 的构造函数，它的其他能力由其他的方法来进行扩展：
+
+* initMixin
+
+* stateMixin
+
+* eventsMixin
+
+* lifecycleMixin
+
+* renderMixin
