@@ -1,5 +1,7 @@
 # init.js
 
+## 源码
+
 ```js
 /* @flow */
 
@@ -130,6 +132,8 @@ function resolveModifiedOptions (Ctor: Class<Component>): ?Object {
   return modified
 }
 ```
+
+## 解读
 
 `init.js` 模块为提供了 `initMixin` 方法，该方法为 Vue 的原型对象增加了一个 `_init` 方法。
 
