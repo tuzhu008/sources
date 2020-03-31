@@ -25,6 +25,7 @@
   * lifecycle.js
   * proxy.js
   * render.js
+  * state.js
 
 ## Ant Design
 
