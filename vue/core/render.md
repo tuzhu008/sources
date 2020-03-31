@@ -1,3 +1,8 @@
+# event.js
+
+## 源码
+
+```js
 /* @flow */
 
 import {
@@ -127,3 +132,6 @@ export function renderMixin (Vue: Class<Component>) {
     return vnode
   }
 }
+```
+
+## 解读
