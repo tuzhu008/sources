@@ -17,7 +17,7 @@
 
 * [$nextTick](vue/nexttick.md)
 * [入口](/vue/entry.md)
-* core
+* [core](/vue/core/README.md)
   * [index.js](/vue/core/index.md)
   * [init.js](/vue/core/init.md)
   * [events.js](/vue/core/events.js)
