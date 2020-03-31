@@ -1,3 +1,6 @@
+# init.js
+
+```js
 /* @flow */
 
 import config from '../config'
@@ -126,3 +129,4 @@ function resolveModifiedOptions (Ctor: Class<Component>): ?Object {
   }
   return modified
 }
+```
