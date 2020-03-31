@@ -54,6 +54,8 @@ export default Vue
 
 * lifecycleMixin
 
+  为 Vue 增加原型方法 `_update`、`$forceUpdate`、`$destroy`、`$delete`、`$emit`
+
 * renderMixin
 
 
