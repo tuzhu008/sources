@@ -1,3 +1,8 @@
+# event.js
+
+## 源码
+
+```js
 /* @flow */
 
 import config from '../config'
@@ -348,3 +353,6 @@ export function callHook (vm: Component, hook: string) {
   }
   popTarget()
 }
+```
+
+## 解读
