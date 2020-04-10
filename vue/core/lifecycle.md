@@ -385,5 +385,3 @@ export function callHook (vm: Component, hook: string) {
 
 * `_watcher = null`
 
-
-
