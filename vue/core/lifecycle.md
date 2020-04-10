@@ -356,3 +356,7 @@ export function callHook (vm: Component, hook: string) {
 ```
 
 ## 解读
+
+### initLifecycle
+
+* 将组件实例添加到父实例中
