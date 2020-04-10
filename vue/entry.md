@@ -108,6 +108,8 @@ Vue.prototype._init = function (options?: Object) {
 
 * `initLifecycle()`
 
+  初始化实例的生命周期状态参数和一些实例属性
+
 * `initEvents()`
 
 * `initRender()`
