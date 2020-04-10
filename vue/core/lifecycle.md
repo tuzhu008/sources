@@ -357,6 +357,31 @@ export function callHook (vm: Component, hook: string) {
 
 ## 解读
 
-### initLifecycle
+### `initLifecycle()`
 
-* 将组件实例添加到父实例中
+`initLifecycle()` 函数用于初始化实例的生命周期和实例属性。
+
+这里所说的生命周期是指对应生命周期的一些状态参数，比如：
+
+* `_inactive = null`
+  
+* `_directInactive = false`
+
+* `_isMounted = false`
+
+* `_isDestroyed = false`
+
+* `_isBeingDestroyed = false`
+
+初始化的实例属性：
+
+* `$parent`
+
+* `$root`
+
+* `$children = []`
+
+* `$refs = {}`
+
+* `_watcher = null`
+
