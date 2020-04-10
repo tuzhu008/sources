@@ -361,10 +361,10 @@ export function callHook (vm: Component, hook: string) {
 
 `initLifecycle()` 函数用于初始化实例的生命周期和实例属性。
 
-这里所说的生命周期是指对应生命周期的一些状态参数，比如：
+这里所说的生命周期是指对应生命周期的一些内部的声明周期状态参数，比如：
 
 * `_inactive = null`
-  
+
 * `_directInactive = false`
 
 * `_isMounted = false`
@@ -384,4 +384,6 @@ export function callHook (vm: Component, hook: string) {
 * `$refs = {}`
 
 * `_watcher = null`
+
+
 
