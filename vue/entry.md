@@ -105,3 +105,19 @@ Vue.prototype._init = function (options?: Object) {
   }
 }
 ```
+
+* `initLifecycle()`
+
+* `initEvents()`
+
+* `initRender()`
+
+* `callHook()`
+
+* `initInjections()`
+
+* `initState()`
+
+* `initProvide()`
+
+* `callHook()`
