@@ -119,6 +119,8 @@ Vue.prototype._init = function (options?: Object) {
 
 * `initRender()`
 
+  初始化实例的渲染器
+
 * `callHook()`
 
 * `initInjections()`
