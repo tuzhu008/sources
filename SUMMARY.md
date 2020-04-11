@@ -33,10 +33,17 @@
     * [patch.js](/vue/core/vdom/patch.md)
     * [README.js](/vue/core/vdom/README.md)
     * [vnode.js](/vue/core/vdom/vnode.md)
+  * observer
+    * [array.js](/vue/core/observer/array.md)
+    * [dep.js](/vue/core/observer/dep.md)
+    * [index.js](/vue/core/observer/index.md)
+    * [scheduler.js](/vue/core/observer/scheduler.md)
+    * [traverse.js](/vue/core/observer/traverse.md)
+    * [watcher.js](/vue/core/observer/watcher.md)
+    
 * [shared](/vue/shared/README.md)
   * [constants.js](/vue/shared/constants.md)
   * [util.js](/vue/shared/util.md)
-
 ## Ant Design
 
 
