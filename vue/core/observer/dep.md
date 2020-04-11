@@ -1,3 +1,8 @@
+# event.js
+
+## 源码
+
+```js
 /* @flow */
 
 import type Watcher from './watcher'
@@ -64,3 +69,8 @@ export function popTarget () {
   targetStack.pop()
   Dep.target = targetStack[targetStack.length - 1]
 }
+```
+
+## 解读
+
+`Dep` 是 dependence 的间歇，用于表示属性的依赖。

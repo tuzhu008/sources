@@ -285,4 +285,54 @@ function dependArray (value: Array<any>) {
 
 ### `defineReactive()`
 
-`defineReactive()` 函数
+`defineReactive()` 函数在 Vue 中具有举足轻重的地位。Vue 数据的绑定就是通过该函数来实现的。
+
+该函数使用了装饰器模式。
+
+从代码中可以看到，这个函数使用了 `Object.defineProperty` 来定义一个对象的属性，通过为属性增加 `get` 和 `set` 描述的方式达到自定义响应逻辑的目的。
+
+```js
+Object.defineProperty(obj, key, {
+  enumerable: true,
+  configurable: true,
+  get: function reactiveGetter () {
+    const value = getter ? getter.call(obj) : val
+    if (Dep.target) {
+      dep.depend()
+      if (childOb) {
+        childOb.dep.depend()
+        if (Array.isArray(value)) {
+          dependArray(value)
+        }
+      }
+    }
+    return value
+  },
+  set: function reactiveSetter (newVal) {
+    const value = getter ? getter.call(obj) : val
+    if (newVal === value || (newVal !== newVal && value !== value)) {
+      return
+    }
+    if (process.env.NODE_ENV !== 'production' && customSetter) {
+      customSetter()
+    }
+    // #7981: 用于没有setter的访问器属性
+    if (getter && !setter) return
+    if (setter) {
+      setter.call(obj, newVal)
+    } else {
+      val = newVal
+    }
+    childOb = !shallow && observe(newVal)
+    dep.notify()
+  }
+})
+```
+
+从上面的代码可以看到：
+
+* `get` 的时候进行依赖搜集
+
+* `set` 在设置新的属性值的时候会去通知依赖，促使依赖进行更新。
+
+整个依赖的收集依赖 `dep` 模块。

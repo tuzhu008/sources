@@ -1,3 +1,9 @@
+
+# event.js
+
+## 源码
+
+```js
 /* @flow */
 
 import {
@@ -241,3 +247,6 @@ export default class Watcher {
     }
   }
 }
+```
+
+## 解读
