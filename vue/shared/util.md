@@ -1,3 +1,8 @@
+# event.js
+
+## 源码
+
+```js
 /* @flow */
 
 export const emptyObject = Object.freeze({})
@@ -341,3 +346,4 @@ export function once (fn: Function): Function {
     }
   }
 }
+```
