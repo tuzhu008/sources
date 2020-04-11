@@ -106,11 +106,16 @@ Vue.prototype._init = function (options?: Object) {
 }
 ```
 
+`_init` 方法对实例进行了初始化。首先它对实例的配置进行处理，并将其作为实例的 `$options` 属性。`_init` 之后的操作都依赖于此配置。
+
+
 * `initLifecycle()`
 
   初始化实例的生命周期状态参数和一些实例属性
 
 * `initEvents()`
+
+  初始化实例的事件
 
 * `initRender()`
 
