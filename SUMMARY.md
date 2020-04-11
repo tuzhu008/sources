@@ -26,13 +26,13 @@
   * [proxy.js](/vue/core/proxy.md)
   * [render.js](/vue/core/render.md)
   * [state.js](/vue/core/state.md)
-  * [vdom](/vue/core/README.md)
-    * [create-component.js](/vue/vdom/create-component.md)
-    * [create-element.js](/vue/vdom/create-element.md)
-    * [create-functional-component.js](/vue/vdom/create-functional-component.md)
-    * [patch.js](/vue/vdom/patch.md)
-    * [README.js](/vue/vdom/README.md)
-    * [vnode.js](/vue/vdom/vnode.md)
+  * [vdom](/vue/core/vdom/README.md)
+    * [create-component.js](/vue/core/vdom/create-component.md)
+    * [create-element.js](/vue/core/vdom/create-element.md)
+    * [create-functional-component.js](/vue/core/vdom/create-functional-component.md)
+    * [patch.js](/vue/core/vdom/patch.md)
+    * [README.js](/vue/core/vdom/README.md)
+    * [vnode.js](/vue/core/vdom/vnode.md)
 
 ## Ant Design
 
