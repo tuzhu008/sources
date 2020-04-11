@@ -149,3 +149,9 @@ export function eventsMixin (Vue: Class<Component>) {
 ```
 
 ## 解读
+
+### initEvents
+
+`initEvents` 用于初始化实例的事件，它的事件描述来自于 `$options._parentListeners`。
+
+那这个 `$options._parentListeners` 又是什么，它从哪儿来呢？反复地查找源码，终于在 init.js 下发现了蛛丝马迹。
