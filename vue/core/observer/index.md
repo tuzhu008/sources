@@ -282,3 +282,7 @@ function dependArray (value: Array<any>) {
 ```
 
 ## 解析
+
+### `defineReactive()`
+
+`defineReactive()` 函数
