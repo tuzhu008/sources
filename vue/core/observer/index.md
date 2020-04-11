@@ -280,3 +280,5 @@ function dependArray (value: Array<any>) {
   }
 }
 ```
+
+## 解析
