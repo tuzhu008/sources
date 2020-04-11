@@ -1,3 +1,8 @@
+# event.js
+
+## 源码
+
+```js
 /* @flow */
 
 import Dep from './dep'
@@ -274,3 +279,4 @@ function dependArray (value: Array<any>) {
     }
   }
 }
+```
