@@ -1,3 +1,8 @@
+# create-component.js
+
+## 源码
+
+```js
 /* @flow */
 
 import VNode from './vnode'
@@ -266,3 +271,6 @@ function transformModel (options, data: any) {
     on[event] = callback
   }
 }
+```
+
+## 解读
