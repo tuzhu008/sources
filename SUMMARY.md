@@ -33,6 +33,9 @@
     * [patch.js](/vue/core/vdom/patch.md)
     * [README.js](/vue/core/vdom/README.md)
     * [vnode.js](/vue/core/vdom/vnode.md)
+* [shared](/vue/shared/README.md)
+  * [constants.js](/vue/shared/constants.md)
+  * [util.js](/vue/shared/util.md)
 
 ## Ant Design
 
