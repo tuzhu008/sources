@@ -335,4 +335,5 @@ Object.defineProperty(obj, key, {
 
 * `set` 在设置新的属性值的时候会去通知依赖，促使依赖进行更新。
 
-整个依赖的收集依赖 `dep` 模块。
+整个依赖的收集依赖 [`dep`](//vue/core/observer/dep.md) 模块。
+
